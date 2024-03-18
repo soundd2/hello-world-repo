@@ -1,12 +1,13 @@
-Name: Hello World
+name: Hello World Workflow
 
 on:
-    push
-
+  push:
+    branches:
+      - main
 
 jobs:
-    runner: ubuntu-lates
- steps:
-    Name: Echo text
-    run: echo "Hello, world!"
-    
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo text
+        run: echo "Hello, world!"
